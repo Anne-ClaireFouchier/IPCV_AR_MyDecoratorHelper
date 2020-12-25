@@ -31,8 +31,10 @@ public class DataHandler : MonoBehaviour
     }
 
     private void Start(){
-      //LoadItems();
-      //CreateButtons();
+      //LoadItems(); 
+      //CreateButtons();//This does not work when the objects come from Cloud (asynch method), 
+                        // the objects are not yet dowloaded when this executes, so we move the button creation
+                        // to AssetLoader instead of here.
     }
 
     public void CreateButton(GameObject cloudAsset, Sprite image, int id)
